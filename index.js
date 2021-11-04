@@ -9,6 +9,9 @@ const task = require('./api/models/model.js');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const cors = require('cors');
+app.use(cors());
+
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 // Replace the following with your Atlas connection string                                                                                                                                        
