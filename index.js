@@ -22,7 +22,7 @@ mongoose.connect(connectionUrl, {
   }); 
 
 //import routes
-const routes = require('./api/routes/routes.js'); 
+const routes = require('./routes/routes.js'); 
 
 //register the route
 routes(app);
