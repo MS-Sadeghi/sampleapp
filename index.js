@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 // Replace the following with your Atlas connection string                                                                                                                                        
-const connectionUrl = "mongodb+srv://whatif:whatif@cluster0.ntvqy.mongodb.net/Todos?retryWrites=true&w=majority";
+const connectionUrl = process.env.MONGODB_URI;
 mongoose.connect(connectionUrl, { 
     useNewUrlParser: true,
     useUnifiedTopology: true 
